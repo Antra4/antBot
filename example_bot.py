@@ -30,6 +30,9 @@ async def on_message(message):
     if message.content.startswith('$hello'):
         await message.channel.send('Hello!')
 
+    if message.content.startswith('$rango'):
+        await message.channel.send(file=discord.File('images/rango.jpg', 'rango.jpg'))
+
 ant_bot_key = os.getenv('ANT_BOT_V1')
 print(ant_bot_key)
-client.run(ant_bot_key)
+client.run(ant_bot_key)  # pyright: ignore[reportArgumentType]
